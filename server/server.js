@@ -13,11 +13,15 @@ app.use(cors());
 app.use(express.json());
 
 //employee middleware
-app.use(require('./routes/emp-controller'));
+app.use('/api/emp',require('./routes/emp-controller'));
 
 // listen on port
-app.listen(port, () => {
+app.listen(port, (err) => {
     // connect to database when server starts
+    if(err){
+        console.log(err);
+        require('./db/conn');
+    }
     require('./db/conn');
     console.log(`server is running on port ${port}`);
 });
