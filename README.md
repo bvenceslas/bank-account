@@ -2,6 +2,10 @@
 
 Bank Account using state management useReducer
 
+# Preview
+
+[Bank Account Management](https://bvenceslas.github.io/bank-account)
+
 ## Getting Started
 
 The project is public
